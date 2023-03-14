@@ -33,12 +33,16 @@ img {
     padding: 0 7.5rem;
 }
 
+.meme-img {
+transition: all 0.5s;
+}
+
 .title-meme {
     padding-right: 3rem;
 }
 
 .acor-picture input, .meme-img {
-    display: none;
+    max-width: 0;
 }
 
 .acor-meme:hover .label-name {
@@ -46,16 +50,16 @@ img {
 }
 
 .label-name .plus:hover {
-    display: block;
+    max-width: 100%;
 }
 
 .acor-picture input:checked ~ .meme-img {
-    display: block;
-    
+    max-width: 100%;
 }
 
 .acor-picture:hover .meme-img {
-    display: block;
+    transition: all 1s;
+    max-width: 100%;
 }
 
 .plus {
@@ -69,3 +73,62 @@ input:checked ~ .label-name .plus {
     transform: rotate(45deg);
 }
 
+@media (min-width: 1920px) {
+    .acor-meme {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        font-size: 5.5rem;
+    }
+    .label-name {
+        font-size: 5rem;
+    }
+    img {
+        height: auto;
+        width: 100%;
+        max-width: 85rem;
+        align-self: flex-start;
+        padding: 0 7.5rem;
+    }
+}
+
+@media (min-width: 820px) {
+    .acor-meme {
+        font-size: 3rem;
+    }
+    .label-name {
+        font-size: 2.7rem;
+        padding: 0 2rem;
+    }
+    img {
+        height: auto;
+        width: 80%;
+        max-width: 80rem;
+        align-self: flex-start;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media (min-width: 320px) {
+    .acor-meme {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        font-size: 1.7rem;
+    }
+    img {
+        height: auto;
+        width: 100%;
+        max-width: 65rem;
+        align-self: flex-start;
+        padding: 0;
+    }
+    .acor-picture {
+        font-size: 1.3rem;
+    }
+}
