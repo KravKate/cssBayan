@@ -70,8 +70,14 @@ transition: all 0.5s;
 .acor-meme:hover .plus {
     opacity: 1;
 }
+
 input:checked ~ .label-name .plus {
     transform: rotate(45deg);
+}
+
+.acor-picture input:checked + .label-name + .meme-img {
+    height: auto;
+    padding: 0.7rem 0;
 }
 
 @media (min-width: 1920px) {
