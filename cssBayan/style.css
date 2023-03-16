@@ -1,0 +1,141 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #F5F5DC;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.acor-meme {
+    background-color: #F5F5DC;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.label-name {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-self: flex-start;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: hsl(60, 17%, 28%);
+    border-top: 0.1em solid #d6d6b2;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+img {
+    height: auto;
+    width: 100%;
+    max-width: 25rem;
+    align-self: flex-start;
+    padding: 0 7.5rem;
+}
+
+.meme-img {
+transition: all 0.5s;
+}
+
+.title-meme {
+    padding-right: 3rem;
+}
+
+.acor-picture input, .meme-img {
+    max-width: 0;
+}
+
+.acor-meme:hover .label-name {
+    color: black;
+}
+
+.label-name .plus:hover {
+    max-width: 100%;
+}
+
+.acor-picture input:checked ~ .meme-img {
+    max-width: 100%;
+}
+
+.acor-picture:hover .meme-img {
+    transition: all 1s;
+    max-width: 100%;
+}
+
+.plus {
+    opacity: 0;
+}
+
+.acor-meme:hover .plus {
+    opacity: 1;
+}
+
+input:checked ~ .label-name .plus {
+    transform: rotate(45deg);
+}
+
+.acor-picture input:checked + .label-name + .meme-img {
+    height: auto;
+    padding: 0.7rem 0;
+}
+
+@media (min-width: 1920px) {
+    .acor-meme {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        font-size: 5.5rem;
+    }
+    .label-name {
+        font-size: 5rem;
+    }
+    img {
+        height: auto;
+        width: 100%;
+        max-width: 85rem;
+        align-self: flex-start;
+        padding: 0 7.5rem;
+    }
+}
+
+@media (max-width: 820px) {
+    .acor-meme {
+        font-size: 3rem;
+    }
+    .label-name {
+        font-size: 2.7rem;
+        padding: 0 2rem;
+    }
+    img {
+        height: auto;
+        width: 80%;
+        max-width: 80rem;
+        align-self: flex-start;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media (max-width: 320px) {
+    .acor-meme {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        font-size: 1.7rem;
+    }
+    img {
+        height: auto;
+        width: 100%;
+        max-width: 65rem;
+        align-self: flex-start;
+        padding: 0;
+    }
+    .acor-picture {
+        font-size: 1.3rem;
+    }
+}
